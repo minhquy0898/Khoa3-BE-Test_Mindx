@@ -25,10 +25,8 @@ export const createInventory = async (req, res) => {
 
 export const check = async (req, res) => {
     try {
-        // Lấy danh sách đơn hàng
         const orders = await order.find();
 
-        // Duyệt qua mỗi đơn hàng và lấy mô tả sản phẩm
         const ordersWithDescriptions = await Promise.all(
             orders.map(async (order) => {
                 const product = await inventory.findOne({ sku: order.item });
