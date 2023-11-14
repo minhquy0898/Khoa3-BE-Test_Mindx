@@ -16,8 +16,8 @@ app.use(
 app.use(express.json());
 app.use("/", router)
 
-mongoose.connect('mongodb+srv://muacp1:D5hWHnHb98UpNkE2@clusterformindx.1kenhbr.mongodb.net/?retryWrites=true&w=majority')
-    .then(() => console.log('Connected with MongoDB!'));
+mongoose.connect('mongodb+srv://testmindx1:XgruVCG8JzLQlIG8@testmindx.5onevcf.mongodb.net/?retryWrites=true&w=majority')
+    .then(() => console.log('Connect MongoDB Success'));
 app.listen(port, () => {
     console.log(`Server listening on ${port}`);
 })
